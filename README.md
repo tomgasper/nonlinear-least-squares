@@ -15,4 +15,4 @@ More info:
 ## Examples
 
 Curve fitting using Gauss-Newton Algorithm
-![image info](./examples/gauss_newton_graph.jpg)
+<img src="./examples/gauss_newton_graph.jpg" width="800">
