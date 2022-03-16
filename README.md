@@ -14,9 +14,9 @@ More info:
 
 ## Examples
 
-Curve fitting using Gauss-Newton Algorithm
+Curve fitting using Gauss-Newton Algorithm  
 <img src="./examples/gauss_newton_graph.jpg" width="600">
 
-Localizing local extrema(minima in this case) using Newton's Method, with x=0.6 as a starting point
-Green dotted line is the second-order Taylor polynomial
+Localizing local extrema(minima in this case) using Newton's Method, with x=0.6 as a starting point  
+Green dotted line is the second-order Taylor polynomial  
 <img align="right" width="600" src="./examples/newtons_method_graph.gif">
