@@ -32,6 +32,8 @@ int main()
     std::vector<double> p, x, y;
 
     // GaussNewton Algorithm
+    
+    //Example: Optimizing parameters for the model function: R = x*B_1/x+B_2, using X, Y data points 
     std::vector<double> optim_params;
     GaussNewton fnc(model_fnc, X_v, Y_v, B);
 
@@ -52,5 +54,26 @@ int main()
 
     matplotlibcpp::plot(x, y, "m");
     matplotlibcpp::scatter(X, Y, 10.0);
+
+    // Newtons Method
+    if (PyArray_API == NULL)
+    {
+        Py_Initialize();
+        import_array();
+    }
+
+    // Example: looking for local extrema of: f(x,y)=4+x^3+y^3-3xy
+    std::vector<double> x_x{ 54 }, x_y{ 32 };
+    std::vector<double> X_0 = { x_x[0], x_y[0] };
+
+    SurfaceMinExample f(X_0);
+    f.NewtonsMethod();
+
+    // Example: looking for local extrema of: f(x) = x^2 - 10 + 6x*cos(x)
+    double x_0 = 2;
+
+    CurveMinExample f_1(x_0);
+    f_1.NewtonsMethod();
+
     matplotlibcpp::show();
 }
